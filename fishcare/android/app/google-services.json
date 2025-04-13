@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "870286308788",
+    "firebase_url": "https://fishcare-a8931-default-rtdb.firebaseio.com",
+    "project_id": "fishcare-a8931",
+    "storage_bucket": "fishcare-a8931.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870286308788:android:fa2ae8e5407bb6c93a6ee1",
+        "android_client_info": {
+          "package_name": "com.example.fishcare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIU0-oN9Q0EGYJppAOros_sYZ97AQBD3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

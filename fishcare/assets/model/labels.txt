@@ -1,5 +1,5 @@
-0 healthy
-1 mas
-2 str
-3 tlv
-4 notval
+abdomen
+eyes
+skin
+healthy
+notval

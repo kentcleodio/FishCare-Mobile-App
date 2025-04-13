@@ -1,14 +1,13 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:FishCare/pages/aboutpage.dart';
-import 'package:FishCare/pages/homepage.dart';
-import 'package:FishCare/pages/adminpage.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:FishCare/pages/splash.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:FishCare/firebase_options.dart';
+import 'src/pages/splash.dart';
+import 'src/themes/apptheme.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,18 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-       theme: ThemeData(
-        textTheme: GoogleFonts.openSansTextTheme(
-          Theme.of(context).textTheme,
-        ),
-        primarySwatch: Colors.blue,
-      ),
-      home: Splash(),
-      routes: {
-        '/homepage' :(context) => HomePage(),
-        '/adminpage' :(context) => AdminPage(),
-        '/aboutpage' :(context) => AboutPage(),
-      },
+      title: 'FishCare App',
+      theme: AppTheme.theme,
+      home: const Splash(),
     );
   }
 }
